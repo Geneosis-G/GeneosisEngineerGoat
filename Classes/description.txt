@@ -1,0 +1,47 @@
+Time to build something more exciting...
+
+What about... A turret! But not those simplistic turrets you see in every game, no, my turret have to be incredible! I will need some laser canons for a better precision... Also a life sensor to detect tagets automatically... Oh, and of course the last embedded processor for fast and fluid movements... Okay, let's gather all that and start to work!
+
+[b]Any question or problem to use this mod? [url=http://steamcommunity.com/sharedfiles/filedetails/?id=314929396]Click here to read the FAQ.[/url][/b]
+
+[b]FEATURES[/b]
+- Engineer Goat: Can craft auto-aiming laser Turrets.
+
+[b]COMMANDS[/b]
+- [b][R]:[/b] Hold 3s without moving to gather crafting materials.
+- [b][R] + 10 Materials:[/b] Hold 3s without moving to craft a Turret.
+
+[b]GAMEPAD COMMANDS[/b]
+- [b][Y]:[/b] Hold 3s without moving to gather crafting materials.
+- [b][Y] + 10 Materials:[/b] Hold 3s without moving to craft a Turret.
+
+[b]CHARACTERISTICS[/b]
+- Only some objects can be used as crafting material (mainly metallic and decorative objects).
+- When you gather crafting material a smoke cloud will appear, when it disapear all usable materials will be collected.
+- Each player is limited to 5 Turrets, crafting more will delete the oldest.
+- Turret specifications:
+-- Field of view: 90°
+-- Fire rate: 4 shots per second
+-- Damage type: Repulsive laser (10% chance to ragdoll)
+-- AI: Target and shoot the closest living creature
+- A Turret does not target it's creator (but a lost shot can hit him).
+- The Turret camera emit red light when it's is active.
+- If a Turret fall at more than 45° it will be deactivated.
+- Any player can lick a turret to hold it and go ragdoll to drop it.
+- When no player is close to a Turret it will be deactivated.
+
+[b]EASTER EGGS[/b]
+- [spoiler]You can now build your own Goater Defence :D[/spoiler]
+- [spoiler]The maximum number of Turrets is 5 because that's all you need to make a Turret circle with no dead angle.[/spoiler]
+- [spoiler]Turrets can not be copied with the 3D Printer, but craftable materials can be.[/spoiler]
+
+[b]KNOWN BUGS[/b]
+- Turret components can appear disassembled when the Turret moves too fast (can't fix).
+- When more than one Turret is crafted at once, they can collide with each other and be thrown away.
+
+[b]DEV NOTES[/b]
+[quote=About this mod]I think this mod took the first position in front of the Spider Goat in the list of mods that took me the longest time X) I'm not sure where the idea of this mod comes from exactly, but I know that I really wanted to make a turret as close as possible to the Portal turrets when I started it ^^
+The first step was to build a turret out of existing objects and animate it... This took almost 2 complete days >_< Sadly there is no easy way in Unreal Script to say "stick this object to this other object at this relative position and lock some rotation axis"... So I had to do it the hard way, with a lot of vector and rotator math, and a lot of trials and errors until I got the visuals I expected.
+Then came the lasers :D That was the first time I was using a "beam" effect so I had no idea how to configure it (mainly how to say "start here and stop there"). After some hours spend on the internet to find a way to set the end point of the laser through code, I was finally able to make lasers starting at the canon and stoping after hiting something solid :) Another little problem I found with lasers are (once again) ragdolls -_- For some reasons ragdolls are completely undetectable when you make a trace to get the first object in a certain direction... So I used a crappy workarount to let the laser shoot its target even if it's ragdoll, basically I test if the body is closer than the point hit by the end of the laser, and if so, I set the new end of the laser on the ragdoll body.
+Last but not least, the crafting system! Honestly, I didn't really think about this before starting the mod. At the beginning there was just a smoke cloud ans some sounds and the turret was spawned from nowhere. Anyway I thought that it could be even more cool if you could "transform" some items into a turret ^^ My first idea was to let you craft turret out of any metallic object, so I started looking for a way to detect if an object was metallic or no. I found a solution but it was not perfect: some metallic objects were detected but not all of them, making it impossible in some maps to find enough items to craft a turret :/ So in the end I added a few more object categories to the "craftable materials" list so that you can almost always find something to use for crafting but also so that you can't use everything for that.
+[/quote]
